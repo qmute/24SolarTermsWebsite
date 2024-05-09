@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./source/css/24Css.css">
+    <script type="text/javascript" src="./source/js/jquery.js"></script>
+    <link rel="shortcut icon" href="./favicon.png" />
+    <title>24 Solar Terms</title>
+</head>
+<body>
+    <div id="wrapper">
+        <section id="bannerContent">
+            <div id="banner">
+                <img src="./source/img/banner1.jpg" alt="" class="active">
+                <img src="./source/img/banner2.jpg" alt="">
+                <img src="./source/img/banner3.jpg" alt="">
+                <img src="./source/img/banner4.jpg" alt="">
+                <img src="./source/img/banner5.jpg" alt="">
+                <img src="./source/img/banner6.jpg" alt="">
+                <img src="./source/img/banner7.jpg" alt="">
+                <img src="./source/img/banner8.jpg" alt="">
+            </div>
+            <div id="bannerTop"></div>
+        </section>
+        <section id="infoContent">
+            <img src="./source/img/appicon.png" alt="">
+            <h1>24 Solar Terms</h1>
+            <p>4 Solar Terms is an app that introduces the "solar terms" of traditional Chinese culture. It combines Chinese traditional paintings to better display the meaning and implication of solar terms.</p>
+            <p>For global users, multiple language options are available. Provide high-definition original Chinese painting wallpapers and original works for users who love Chinese traditional painting to download.</p>
+            <p>Thank you to everyone who loves Chinese traditional culture.</p>
+        </section>
+        <section id="appShowContent">
+            <img src="./source/img/appShow.png" alt="">
+            <p>Our app can display the dates of the 24 solar terms on the calendar, and can also send reminders when the dates are approaching if necessary.</p>
+            <p>We have a detailed introduction to each solar term, introducing the origin of the solar term, customs and habits, and related ancient Chinese poems or texts.</p>
+            <p>At the same time, there are high-definition wallpapers and Chinese paintings carefully created by our painters for you to download.</p>
+        </section>
+        <section id="bottomContent">
+            <p>Scan the QR code below to download the 24 Solar Terms</p>
+            <img src="./source/img/24QR.png" alt="">
+            <p>or</p>
+            <a href="./openApp.html" target="_blank">Download 24 Solar Terms</a>
+            <div class="copyright">©copyright 2024 Easy Slip Technology Co., Ltd.  All rights reserved.</div>
+        </section>
+    </div>
+</body>
+<script  type="text/javascript">
+    $(document).ready(function() {
+        var windowWidth = $("#bannerContent").width();
+        // var bannerW = $("#bannerContent").width();
+        function heightChange() {
+            $("#banner").height(windowWidth*0.375);
+            $("#bannerTop").height(windowWidth*0.375);
+            // $(".projectBox").height(projectW/5*3);
+        }
+        heightChange();
+
+        $(window).resize(function(){
+            var windowWidth = $("#bannerContent").width();
+            $("#banner").height(windowWidth*0.375);
+            $("#bannerTop").height(windowWidth*0.375);
+        });
+
+        setInterval(function() {
+            var $active = $('#banner img.active');
+            var $next = $active.next('img').length ? $active.next('img') : $('#banner img:first');
+            $active.fadeOut(200).removeClass('active');
+            $next.fadeIn(200).addClass('active');
+         }, 5000); // 每3秒钟切换一次图片
+        
+    });
+    
+</script>
+</html>
