@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="./source/js/jquery.js"></script>
   <title>download 24 Solar Terms</title>
 </head>
 <body>
@@ -14,8 +14,8 @@
       var isiOS = ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1 || ua.indexOf("macintosh") > -1 || ua.indexOf("mac os x") > -1;
 
       if (isAndroid) {
-          // window.location.href = "https://www.banzuoshan.cn/c/apk/last";
-          $(".word").text('安卓版敬请期待');
+          window.location.href = "https://play.google.com/store/apps/details?id=cc.easyslip.solarterms&pcampaignid=web_share";
+          // $(".word").text('安卓版敬请期待');
 
       } else if (isiOS) {
           window.location.href = "https://itunes.apple.com/us/app/id6502377608";
