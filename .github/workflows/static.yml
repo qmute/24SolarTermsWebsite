@@ -28,4 +28,4 @@ jobs:
           key: ${{ secrets.SERVER_LOGIN_KEY }}
           source: '*.html,favicon.*,source/*'
           target: '/opt/24solarterms/pb_public'
-          strip_components: 1
+          overwrite: true
