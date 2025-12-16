@@ -3,14 +3,14 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - 'main'
+      - "main"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 20 ]
+        node: [20]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,6 +26,6 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_LOGIN_KEY }}
-          source: '*.html,favicon.*,source/*'
-          target: '/opt/24solarterms/pb_public'
+          source: "*.html,favicon.*,source/*"
+          target: "/opt/24solarterms/data/public"
           overwrite: true
