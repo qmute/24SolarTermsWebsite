@@ -75,7 +75,8 @@
         <p>为保障应用核心功能（如时间显示、计划任务、地区化内容）正常运行，应用会检测系统时区、日期、时间、语言地区的变更。这属于设备设置信息，不会识别个人身份。</p>
         <p>响应系统设置变更的说明</p>
         <p>为了确保本应用能根据您的设备设置（如时区、日期、语言）准确提供核心服务（如小组件日期和节气的显示），应用会监听相关的系统配置变更广播（如
-            android.intent.action.TIMEZONE_CHANGED;android.intent.action.LOCALE_CHANGED,android.intent.action.DATE_CHANGED,android.intent.action.TIME_SET）。
+            android.intent.action.TIMEZONE_CHANGED; android.intent.action.LOCALE_CHANGED;
+            android.intent.action.DATE_CHANGED; android.intent.action.TIME_SET）。
         </p>
         <p>此行为仅在您主动更改系统设置或系统自身更新时触发，用于即时调整应用内的相关功能。应用不会在后台为此目的进行任何定时或持续性的自启动，亦不会滥用此机制进行不必要的后台活动。</p>
         <p>我们采取适当的物理、技术和管理措施来保护您的个人信息，防止未经授权的访问和使用。</p>
